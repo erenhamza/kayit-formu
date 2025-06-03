@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Kobi Fatura</title>
+	
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Boostrap style -->
+	<link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.css">
+
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+	
+	<!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheet/colors/color1.css" id="colors">  
+
+	<!-- Reponsive -->
+	<link rel="stylesheet" type="text/css" href="stylesheet/responsive.css">
+
+    <!-- Favicon and touch icons  -->
+    <link href="icon/kobifatura-icon.png" rel="apple-touch-icon-precomposed">
+    <link href="icon/kobifatura-icon.png" rel="apple-touch-icon-precomposed">
+    <link href="icon/kobifatura-icon.png" rel="shortcut icon">
+	
+	<style>
+@media (max-width: 767px) {
+    #banner-slide {
+        height: 60vh !important; /* Ekran yüksekliğinin %60'ı */
+        min-height: 400px; /* Minimum ykseklik */
+    }
+    
+    .rev-slidebg {
+        background-size: contain !important; /* Grsel tam görünsün */
+        background-position: center top !important;
+    }
+}
+
+        .form-box {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .input-box {
+            margin-bottom: 15px;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-btn {
+            background-color: #162938;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hata ve Başarı Mesajları */
+        .message-box {
+            display: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .error-box {
+            background-color: #ffcccc;
+            border: 1px solid #ff0000;
+            color: #a10000;
+        }
+        .success-box {
+            background-color: #ccffcc;
+            border: 1px solid #00b300;
+            color: #006600;
+        }
+	</style>
+
+</head>
+	<body>
+<div class="bg-blur">
+        <div class="boxed">
+		<!-- Preloader -->
+	    <div class="preloader">
+	        <div class="clear-loading loading-effect-2">
+	            <span></span>
+	        </div>
+	    </div>
+
+		 <div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="flat-infomation">
+							<li class="phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+902163937849" title="phone">+90 (216) 393 78 49</a></li>
+							<li class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@kobifatura.com" title="email">info@kobifatura.com</a></li>
+						</ul>
+						<div class="flat-login-register">
+							<a href="https://uygulama.kobifatura.com/" target="_blank" title="" class="questions">Giriş Yap</a>
+							<a href="#" title="" class="appointment">Kayıt ol</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	
+		
+
+		<header id="header" class="header transparent style3">
+			<div class="container">
+				<div class="row">
+					<div class="header-wrap">
+						<div class="col-md-2">
+							<div id="logo" class="logo">
+								<a href="anasayfa.html" title="">
+									<img src="images/kobifatura-logo.png" alt="logo Finance Business" style="width: 120px; margin-top: -15px;"/>
+								</a>
+							</div><!-- /#logo -->
+						</div><!-- /.col-md-3 -->
+						<div class="col-md-10">	
+							<div class="flat-show-search">
+                                <div class="show-search">
+                                    <a href="#"><i class="fa fa-search"></i></a>                                             
+                                </div>
+                                <div class="top-search">                        
+                                    <form action="#" id="searchform-all" method="get">
+                                        <div>
+                                            <input type="text" id="s" class="sss" placeholder="Search...">
+                                            <input type="submit" value="" id="searchsubmit">
+                                        </div>
+                                    </form>
+                                </div> <!-- /.top-search -->
+                            </div>  <!-- /.flat-show-search -->						
+							<div class="nav-wrap">
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->								
+								<nav id="mainnav" class="mainnav">
+									<ul class="menu">
+										<li class="has-sub-menu">
+											<a href="#" title="">Özellikler<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+											<ul class="sub-menu">
+												<li><a href="#" title="">Fatura Takibi</a></li>
+												<li><a href="#" title="">Cari Hesap Takibi</a></li>
+												<li><a href="#" title="">Raporlama</a></li>
+												<li><a href="#" title="">Stok Ve Depo Takibi</a></li>
+												<li><a href="#" title="">Serbest Meslek Makbuzu Takibi</a></li>
+												<li><a href="#" title="">Gelir Gider Takibi</a></li>
+												<li><a href="#" title="">Kobi Fatura e-Ticaret</a></li>
+												<li><a href="#" title="">e-Ticaret Entegrasyonları</a></li>
+											</ul>
+										</li>
+										<li class="has-sub-menu">
+											<a href="#" title="">Uygulamalar<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+											<ul class="sub-menu">
+												<li><a href="#" title="">e-Fatura</a></li>
+                                                <li><a href="#" title="">e-İhracat Faturas</a></li>
+                                                <li><a href="#" title="">Online Tahsilat</a></li>
+                                                <li><a href="#" title="">CRM Entegrasyonu</a></li>
+                                                <li><a href="#" title="">e-Arşiv</a></li>
+                                                <li><a href="#" title="">e-Serbest Meslek Makbuzu</a></li>
+                                                <li><a href="#" title="">Banka Entegrasyonu</a></li>
+                                                <li><a href="#" title="">Kobi Fatura e-Ticaret</a></li>
+                                                <li><a href="#" title="">Mağaza Ynetimi Entegrasyonu</a></li>
+                                                <li><a href="#" title="">e-İrsaliye Program</a></li>
+											</ul><!-- /.sub-menu -->
+										</li>
+										<li>
+											<a href="#" title="">Müşteriler</a>
+										</li>
+										<li>
+											<a href="fiyat.html" title="">Fiyatlar</a>
+										</li>
+										<li>
+											<a href="iletisim.html" title="">İletişim</a>
+										</li>										
+									</ul><!-- /.menu -->									
+								</nav><!-- /#mainnav -->							
+							</div><!-- /.nav-wrap -->
+						</div><!-- /.col-md-9 -->
+					</div><!-- /.header-wrap -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</header><!-- /header -->
+		
+		<div>
+			<img src="images/slides/kobi.jpg" style="padding: 0px;" alt="">
+		</div>
+
+
+		<section class="flat-row pd-imagebox">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3">
+						<div class="imagebox-item">
+							<div class="imagebox style1">
+								<div class="imagebox-image">
+									<img src="images/imagebox/001.jpg" alt="">
+								</div><!-- /.imagebox-image -->
+								
+								<div class="imagebox-title">
+									<h3><a href="#" title="">e-Fatura</a></h3>
+								</div><!-- /.iamgebox-title -->
+								<div class="imagebox-content">
+									<div class="imagebox-desc">
+										Başvuru süreci ile vakit kaybetmeyin, daha kolay, hızlı ve ekonomik faturalayın.
+									</div>
+									<div class="imagebox-button">
+										<a href="#" title="">keşfet</a>
+									</div>
+								</div><!-- /.imagebox-content -->
+							</div><!-- /.imagebox -->
+						</div><!-- /.imagebox-item -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-3">
+						<div class="imagebox-item">
+							<div class="imagebox style1">
+								<div class="imagebox-image">
+									<img src="images/imagebox/002.jpg" alt="">
+								</div><!-- /.imagebox-image -->
+								<div class="imagebox-title">
+									<h3><a href="#" title="">e-Ariv</a></h3>
+								</div><!-- /.imagebox-title -->
+								<div class="imagebox-content">
+									<div class="imagebox-desc">
+										Kullanımı zor programlar ile vakit kaybetmeyin, kolayca e-arşiv göndermeye başlayın.
+									</div>
+									<div class="imagebox-button">
+										<a href="#" title="">keşfet</a>
+									</div>
+								</div><!-- /.imagebox-content -->
+							</div><!-- /.imagebox -->
+						</div><!-- /.imagebox-item -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-3">
+						<div class="imagebox-item">
+							<div class="imagebox style1">
+								<div class="imagebox-image">
+									<img src="images/imagebox/003.jpg" alt="">
+								</div><!-- /.imagebox-image -->
+								<div class="imagebox-title">
+									<h3><a href="#" title="">e-SMM</a></h3>
+								</div><!-- /.imagebox-title -->
+								<div class="imagebox-content">
+									<div class="imagebox-desc">
+										e-Serbest Meslek Makbuzu hizmeti ile giderleri azaltın ve tahsilatlar hzlandırın.	
+									</div>
+									<div class="imagebox-button">
+										<a href="#" title="">keşfet</a>
+									</div>
+								</div><!-- /.imagebox-content -->
+							</div><!-- /.imagebox -->
+						</div><!-- /.imagebox-item -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-3">
+						<div class="imagebox-item">
+							<div class="imagebox style1">
+								<div class="imagebox-image">
+									<img src="images/imagebox/04.jpg" alt="">
+								</div><!-- /.imagebox-image -->
+								<div class="imagebox-title">
+									<h3><a href="#" title="">e-Ticaret</a></h3>
+								</div><!-- /.imagebox-title -->
+								<div class="imagebox-content">
+									<div class="imagebox-desc">
+										oklu pazaryerinde indirimli Sanal POS ve kargo ile e-ticarete kolayca başlayın!
+									</div>
+									<div class="imagebox-button">
+										<a href="#" title="">keşfet</a>
+									</div>
+								</div><!-- /.imagebox-content -->
+							</div><!-- /.imagebox -->
+						</div><!-- /.imagebox-item -->
+					</div><!-- /.col-md-4 -->
+
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.flat-row-imagebox -->
+
+		<section id="header" class="flat-row flat-iconbox bg-theme">
+			<div class="container">
+			
+				<div class="row">
+					<div class="col-md-12">
+						<div class="title-section left">
+							<h2>Hizmetlerimiz</h2>
+						</div><!-- /.title-section -->
+					</div>
+				</div><!-- /.row -->
+				<div class="row" id="showHalfServices">
+					<div class="row">
+						<div class="row">
+
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded line-chart">
+												
+											</div><!-- /.icon-rounded -->
+											<div class="box-title">
+												<a href="#" title="">Fatura Takibi</a>
+											</div><!-- /.box-title -->
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Hzlı, kolay ve ekonomik faturalayın
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded line-chart">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">Serbest Meslek Makbuzu Takibi</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Makbuz yönetiminizi kolaylaştrın, işinize daha çok vakit ayırın! 
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded line-chart">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">Cari Hesap Takibi</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Cari hesaplarınızı her yerden takip edin 
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+						</div><!-- /.row -->
+		
+						<div class="row">
+							<div class="col-md-12">
+								<div class="height80"></div>
+							</div>
+						</div>
+		
+						<div class="row">
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded line-chart">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">Gelir Gider Takibi</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Tahsilat ve ödeme durumunuzu izleyin 
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded ion-clipboard">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">Raporlama</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Nakit akışı ve kararlılğınızı görerek byyün 
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded line-chart">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">Stok ve Depo Takibi</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Stoklarnızda ürün olmadğ için satş kaçırmayın!
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+						</div><!-- /.row -->
+		
+						
+						<div class="row">
+							<div class="col-md-12">
+								<div class="height80"></div>
+							</div>
+						</div>
+		
+						<div class="row">
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded ion-clipboard">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">İhracat Faturası</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											İhracat Faturası
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded global">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">e-Arşiv</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											Kullanmı kolay e-Arşiv hizmeti 
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+		
+							<div class="col-md-4">
+								<div class="iconbox-item">
+									<div class="iconbox style1">
+										<div class="box-header">
+											<div class="icon-rounded global">
+												
+											</div>
+											<div class="box-title">
+												<a href="#" title="">e-İrsaliye programı</a>
+											</div>
+										</div><!-- /.box-header -->
+										<div class="box-content">
+											e-rsaliye Program ile irsaliyenizi hızlıca kesin, gelen irsaliyelerinizin takibini kolaylkla yapın
+										</div><!-- /.box-content -->
+									</div><!-- /.iconbox -->
+								</div><!-- /.iconbox-item -->
+							</div><!-- /.col-md-4 -->
+						</div>
+					</div>
+				</div>
+
+			<div class="row" id="showAllServices" style="display: none;">
+				<div class="row">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded line-chart">
+											
+										</div><!-- /.icon-rounded -->
+										<div class="box-title">
+											<a href="#" title="">Fatura Takibi</a>
+										</div><!-- /.box-title -->
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Hızl, kolay ve ekonomik faturalayın
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded line-chart">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Serbest Meslek Makbuzu Takibi</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Makbuz yönetiminizi kolaylaştırın, işinize daha çok vakit ayırın! 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded line-chart">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Cari Hesap Takibi</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Cari hesaplarınızı her yerden takip edin 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+					</div><!-- /.row -->
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="height80"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded line-chart">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Gelir Gider Takibi</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Tahsilat ve ödeme durumunuzu izleyin 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded ion-clipboard">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Raporlama</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Nakit akşı ve kararllğınzı görerek byyün 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded line-chart">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Stok ve Depo Takibi</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Stoklarınızda ürn olmadıı için satış kaçrmayın!
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+					</div><!-- /.row -->
+
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="height80"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded ion-clipboard">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">İhracat Faturas</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										İhracat Faturas
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-Arşiv</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Kullanım kolay e-Arşiv hizmeti 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-İrsaliye programı</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										e-İrsaliye Programı ile irsaliyenizi hızlca kesin, gelen irsaliyelerinizin takibini kolaylıkla yapın
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="height80"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded artboard">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Trendyol Entegrasyonu</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Trendyol Entegrasyonu
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-Ticaret Sipariş Yöntemi</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Sipariş Ynetimi 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-İhracat Faturas</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Karışık adımlar ile uğraşmadan e-İhracat faturası gönderin 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="height80"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-Serbest Meslek Makbuzu</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Serbest meslek erbaplar için geçişi kolay e-Serbest Meslek Makbuzu hizmeti!
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-Fatura</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Bir tıkla faturalayın, tahsilatları hızlandırın
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded artboard">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Banka Entegrasyonu</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Banka hesaplarnızdaki hareketler sistemde anlam kazanyor, tüm banka hareketleriniz anında Kobi Fatura'da işleniyor
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="height80"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded magic">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Online Tahsilat</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Kredi kartı seçeneği ile tahsilatlar garantide
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Kobi Fatura e-Ticaret</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Kobi Fatura e-Ticaret ile tüm ihtiyaçlarnız tek pakette! 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded global">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">e-Ticaret Entegrasyonları</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Online Satışlarnızn bilgisi Kobi Fatura'ya aktarlsın, müşteriler, sattığınız rünler ve faturalarnız otomatik olarak oluşturulsun.
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="height80"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded artboard">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">CRM Entegrasyonu</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Tekliften Faturalamaya tm satış süreciniz tek bir sistemde kontrolnüz altında
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-4">
+							<div class="iconbox-item">
+								<div class="iconbox style1">
+									<div class="box-header">
+										<div class="icon-rounded artboard">
+											
+										</div>
+										<div class="box-title">
+											<a href="#" title="">Maaza Yönetimi Entegrasyonu</a>
+										</div>
+									</div><!-- /.box-header -->
+									<div class="box-content">
+										Perakende sat yapan maaza, restoran veya kafenizi kolayca takip edin, satş sürecinizde hiçbir detayı karmayn 
+									</div><!-- /.box-content -->
+								</div><!-- /.iconbox -->
+							</div><!-- /.iconbox-item -->
+						</div><!-- /.col-md-4 -->
+					</div>
+				</div>
+				
+			</div><!-- /.container -->
+			<div class="text-center">
+				<button id="loadMoreButton" class="btn btn-primary">Devamın Ykle</button>
+			</div>
+		</section><!-- /.flat-row-iconbox -->
+
+		<!-- <section class="flat-row flat-owl-stage">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="title-section left">
+							<h2>Our Projects</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="iconbox-slider">
+							<ul class="slides" data-item="3" data-nav="false" data-dots="false" data-auto="true">
+                                <li class="item">
+                                    <div class="featured-post">
+                                        <img src="images/stage/image-01.png" alt="img">
+                                        <a href="images/stage/image-01.png"><i class="fa fa-arrows-alt"></i></a>
+                                    </div>
+                                    <div class="title-post">
+                                        <a href="blog.html" title="">event finder</a>
+                                    </div>
+                                    <div class="category-post">
+                                        <a href="portfolio-v3.html" title="">Invoicing</a>
+                                    </div>
+                                </li>
+
+                                <li class="item">
+                                    <div class="featured-post">
+                                        <img src="images/stage/image-02.png" alt="img">
+                                        <a href="images/stage/image-02.png"><i class="fa fa-arrows-alt"></i></a>
+                                    </div>
+                                    <div class="title-post">
+                                        <a href="blog.html" title="">business solutions</a>
+                                    </div>
+                                    <div class="category-post">
+                                        <a href="portfolio-v3.html" title="">Services </a>/
+                                        <a href="portfolio-v3.html" title=""> Trading</a>
+                                    </div>
+                                </li>
+
+                                <li class="item">
+                                    <div class="featured-post">
+                                        <img src="images/stage/image-03.png" alt="img">
+                                        <a href="images/stage/image-03.png"><i class="fa fa-arrows-alt"></i></a>
+                                    </div>
+                                    <div class="title-post">
+                                        <a href="blog.html" title="">money market</a>
+                                    </div>
+                                    <div class="category-post">
+                                        <a href="portfolio-v3.html" title="">Services </a>/
+                                        <a href="portfolio-v3.html" title=""> Trading</a>
+                                    </div>
+                                </li>
+                            </ul>
+						</div>
+						<div class="clearfix">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<section class="flat-row flat-callback">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<div class="kobi-fatura-text">
+							Kobi Fatura'nın tüm özelliklerini hibir ücret ödemeden 14 gn deneyin!
+						</div>
+						<div class="flat-callback-form">
+							<form id="contactform" method="post" action="" novalidate="novalidate" >
+                                <div class="flat-field">
+									<div class="field-one-half field-email">
+                                        <input type="text" id="email" value="" name="email" placeholder="E-posta adresiniz">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="field-one-half field-phone">
+                                        <input type="password" id="phone" value="" name="phone" placeholder="Parola">
+                                    </div>
+                                    <div class="field-one-half field-submit">
+                                        <button type="submit" name="submit" class="button-submit-field">14 Gün Ücretsiz Deneyin</button>
+                                    </div>
+                                </div>
+                            </form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="flat-row flat-news">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="title-section left">
+							<h2>
+								Latest news
+							</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-4">
+                        <article class="post style2">
+                            <div class="featured-post">
+                                <a href="blog.html" title="" class="post-image">
+                                    <img src="images/news/large-01.jpg" alt="">
+                                </a>
+                                <ul class="post-date">
+                                    <li class="day">11</li>
+                                    <li class="month">JAN</li>
+                                </ul>
+                            </div>
+                            <div class="content-post">
+                                <h4 class="title-post">
+                                    <a href="blog.html" title="">Why Do I Need To Use Financial ?</a>
+                                </h4>
+                                <div class="entry-post">
+                                    <p>Sed facilisis lorem in orci bibendum
+                                        ullamcorper. Mauris vitae augue
+                                        elementum, ...</p>
+                                </div>      
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="post style2">
+                            <div class="featured-post">
+                                <a href="blog.html" title="" class="post-image">
+                                    <img src="images/news/large-02.jpg" alt="">
+                                </a>
+                                <ul class="post-date">
+                                    <li class="day">11</li>
+                                    <li class="month">JAN</li>
+                                </ul>
+                            </div>
+                            <div class="content-post">
+                                <h4 class="title-post">
+                                    <a href="blog.html" title="">Why your sales forecast is off</a>
+                                </h4>
+                                <div class="entry-post">
+                                    <p>Sed facilisis lorem in orci bibendum
+                                        ullamcorper. Mauris vitae augue
+                                        elementum, ...
+                                    </p>
+                                </div>      
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="slidebar-news">
+                        <aside class="widget widget-recent-news">
+                            <ul class="recent-news">
+                                <li>                                    
+                                    <div class="thumb">
+                                        <span class="overlay-pop"></span>
+                                        <a href="blog.html">
+                                            <img src="images/news/image-small-01.png" alt="">
+                                        </a> 
+                                    </div>                                          
+                                    <div class="text">
+                                        <h4>
+                                            <a href="blog.html" title="">Why Do I Need To Use Financial ?</a>
+                                        </h4>
+                                        <div class="entry-post">
+                                            <p>January 11, 2017</p>
+                                        </div>
+                                    </div>                                   
+                                </li>
+
+                                <li>                                    
+                                    <div class="thumb">
+                                        <span class="overlay-pop"></span>
+                                        <a href="blog.html">
+                                            <img src="images/news/image-small-02.png" alt="">
+                                        </a> 
+                                    </div>                                         
+                                    <div class="text">
+                                        <h4>
+                                            <a href="blog.html" title="">Why your sales forecast is off</a>
+                                        </h4>
+                                        <div class="entry-post">
+                                            <p>January 11, 2017</p>
+                                        </div>
+                                    </div>                                    
+                                </li>
+
+                                <li>                                   
+                                    <div class="thumb">
+                                        <span class="overlay-pop"></span>
+                                        <a href="blog.html">
+                                            <img src="images/news/image-small-03.png" alt="">
+                                        </a> 
+                                    </div>                                        
+                                    <div class="text">
+                                        <h4>
+                                            <a href="blog.html" title="">6 tips to retain your top sales talent</a>
+                                        </h4>
+                                        <div class="entry-post">
+                                            <p>January 11, 2017</p>
+                                        </div>
+                                    </div>                                   
+                                </li>
+
+                                <li>                                    
+                                    <div class="thumb">
+                                        <span class="overlay-pop"></span>
+                                        <a href="blog.html">
+                                            <img src="images/news/image-small-04.png" alt="">
+                                        </a> 
+                                    </div>                                         
+                                    <div class="text">
+                                        <h4>
+                                            <a href="blog.html" title="">What the martian can teach sales</a>
+                                        </h4>
+                                        <div class="entry-post">
+                                            <p>January 11, 2017</p>
+                                        </div>
+                                    </div>                                    
+                                </li>
+                            </ul>
+                        </aside>
+                        </div>
+                    </div>
+
+				</div>
+
+			</div>
+		</section> -->
+
+		<!-- Carousel -->
+        <section class="flat-row flat-client bg-theme">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <!-- <ul class="flat-carousel" data-item="5" data-nav="false" data-dots="false" data-auto="true">
+                            <li class="item">
+                                <img src="images/client/logo-slide-05.png" alt="img">
+                            </li>
+                            <li class="item">
+                                <img src="images/client/logo-slide-03.png" alt="img">
+                            </li>
+                            <li class="item">
+                                <img src="images/client/logo-slide-04.png" alt="img">
+                            </li>
+                            <li class="item">
+                                <img src="images/client/logo-slide-02.png" alt="img">
+                            </li>
+                            <li class="item">
+                                <img src="images/client/logo-slide-01.png" alt="img">
+                            </li>
+                        </ul> -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </section> <!-- /.flat-row -->
+
+		<footer id="footer">
+			<div class="footer-widgets">
+				<div class="container">
+					<div class="row footer-title">
+						<div class="col-md-12">
+							<div class="col-md-4 footer-logo">
+								<a href="anasayfa.html"><img src="images/kobifatura-logo.png" alt="logo Finance Business" style="width: 120px; margin-top: -10px;" /></a>
+							</div>
+							<div class="col-md-8 widget-infomation">
+								<ul class="infomation-footer">
+									<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@kobifatura.com" title="">info@kobifatura.com</a></li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+902163937849" title="">+90 (216) 393 78 49</a></li>
+									<!-- <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#" title="">PO Box 16122 Collins Street West Victoria 8007 Australia</a></li> -->
+								</ul><!-- /.infomation-footer -->
+							</div><!-- /.widget-infomation -->
+						</div><!-- /.col-md-12 -->
+					</div><!-- /.row -->
+					<div class="row widget-box">
+						<div class="col-md-4">
+							<div class="widget widget-text">
+								<p>Kobi Fatura, işletmelerin muhasebe sreçlerini kolaylatran kullanıc dostu bir web sitesidir. Gelimi özellikleri sayesinde gelir ve giderleri takip etmenizi, mteri ilikilerinizi gülendirmenizi ve işletme performansınızı analiz etmenizi salar. 
+								</p>
+								<p>
+									Kobi Fatura olarak, sizin büyümenize katkıda bulunmak ve i sürelerinizi verimli hale getirmek iin buradayz.
+								</p>	
+							</div><!-- /.widget-text -->
+						</div><!-- /.col-md-4 -->
+						<div class="col-md-4">
+							<div class="widget widget-services">
+								<ul class="one-half first">
+									<li><a href="#" title="">Hakkımzda</a></li>
+									<li><a href="#" title="">Advertise</a></li>
+									<li><a href="#" title="">Şartlar ve Koullar</a></li>
+									<li><a href="#" title="">Gizlilik Politikas</a></li>
+									<!-- <li><a href="#" title="">Careers</a></li>
+									<li><a href="#" title="">Shop</a></li> -->
+								</ul><!-- /.one-half -->
+								<ul class="one-half">
+									<li><a href="anasayfa.html" title="">Anasayfa</a></li>
+										<li><a href="iletisim.html" title="">İletiim</a></li>
+										<li><a href="fiyat.html" title="">Fiyatlar</a></li>
+								</ul><!-- /.one-half -->
+							</div><!-- /.widget-services -->
+						</div><!-- /.col-md-4 -->
+						<div class="col-md-4">
+							<div class="widget widget-subscribe">
+								<form id="subscribe-form" action="#" method="post" accept-charset="utf-8" data-mailchimp="true">
+									<div id="subscribe-content">
+										<label for="form-email-footer">E-posta:</label>
+										<div class="input-email">
+											<input type="email" name="email-form" id="subscribe-email" placeholder="E-posta Adresiniz" />
+										</div>
+										<button type="button" id="subscribe-button" class="button-subscribe">Gönder</button>
+									</div>
+									<div id="subscribe-msg"></div>
+								</form>
+							</div><!-- /.widget-subscribe -->
+							
+						</div><!-- /.col-md-4 -->
+					</div><!-- /.row .widget-box -->
+				</div><!-- /.container -->
+			</div><!-- /.footer-widgets -->
+			<!-- <div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="copyright">
+								<p></a></p>
+							</div>
+							<ul class="menu-footer">
+								<li><a href="#" title="">Home</a></li>
+								<li><a href="#" title="">My Blog</a></li>
+								<li><a href="#" title="">My Home</a></li>
+								<li><a href="#" title="">Sample Page</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</footer><!-- /#footer -->
+		<div class="button-go-top">
+			<a href="#" title="" class="go-top">
+				<i class="fa fa-chevron-up"></i>
+			</a>
+		</div>
+
+        </div>
+	</div>
+
+	<div style="height:600px" class="wrapper">
+		<span class="icon-close"><ion-icon name="close"></ion-icon>
+		</span>
+        
+        <div class="form-box">
+             <div id="messageContainer" class="message-box"></div>
+            <h2>Kayıt Ol</h2>
+            <form id="registerForm" >
+                <div class="input-box">
+                    <input style="background-color:#efefef75;" type="text" name="firstName" placeholder="Adınız" required>
+                </div>
+                <div class="input-box">
+                    <input style="background-color:#efefef75;" type="text" name="lastName" placeholder="Soyadınız" required>
+                </div>
+                <div class="input-box">
+                    <input style="background-color:#efefef75;" type="email" name="registerEmail" id="registerEmail" placeholder="E-Posta" required>
+                </div>
+                <div class="input-box">
+                    <input style="background-color:#efefef75;" type="password" name="password" placeholder="Şifre" required>
+                </div>
+                <div class="input-box">
+                    <input style="background-color:#efefef75;" type="tel" name="phoneCode" id="phoneCode" placeholder="(5__)" maxlength="10" required>
+                </div>
+                <button type="submit" class="form-btn">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
+
+
+		
+	<!-- Javascript -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/owl.carousel.js"></script>
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascript/jquery.flexslider-min.js"></script>
+    
+    <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
+    <script type="text/javascript" src="javascript/waypoints.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery-validate.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+	<script type="text/javascript" src="javascript/register.js"></script>
+	<script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
+<script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
+
+    <!-- Revolution Slider -->
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="revolution/js/slider_v1.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->    
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+	<script>
+		document.querySelector("#banner-slide .rev-slidebg").style.backgroundPosition = "top left";
+	</script>
+
+<script>
+$(document).ready(function(){
+    $("#registerForm").submit(function(event){
+        event.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
+
+        var email = $("input[name='registerEmail']").val().trim();
+        var password = $("input[name='password']").val().trim();
+        var firstName = $("input[name='firstName']").val().trim();
+        var lastName = $("input[name='lastName']").val().trim();
+        var phoneCode = $("input[name='phoneCode']").val().trim();
+
+        if (!email || !password || !firstName || !lastName || !phoneCode) {
+            showMessage("Lütfen tüm alanları eksiksiz doldurun!", "error");
+            return;
+        }
+
+        if (phoneCode.length < 10) {
+            showMessage("Telefon numarası 10 haneli olmalıdır!", "error");
+            return;
+        }
+
+        var formData = { email, password, firstName, lastName, phoneCode };
+
+        $.ajax({
+            url: "https://kobimobilapi.ircom.com.tr/api/auth/register",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            success: function(response) {
+                showMessage("Kullanıcı kaydınız alınmıştır. Sizinle en kısa sürede iletiime geçeceğiz.", "success");
+
+                // Formu temizle
+                $("#registerForm")[0].reset();
+
+                // 2 saniye sonra anasayfaya yönlendir
+                setTimeout(function() {
+                    window.location.href = "anasayfa.html"; // Yönlendirilecek sayfa
+                }, 2000);
+            },
+            error: function(xhr) {
+                console.log("Hata Yanıtı:", xhr.responseJSON);
+
+                if (xhr.status === 500) {
+                    showMessage("Bu e-posta adresi zaten kayıtlı! Lütfen farkl bir e-posta deneyin.", "error");
+                } else if (xhr.responseJSON && xhr.responseJSON.message.includes("Bu Kullancı Zaten Mevcut")) {
+                    showMessage("Sunucuda bir hata oluştu. Lütfen daha sonra tekrar deneyin!", "error");
+                } else {
+                    showMessage("Bir hata oluştu! Lütfen tekrar deneyin veya daha sonra tekrar kontrol edin.", "error");
+                }
+            }
+        });
+    });
+
+    function showMessage(message, type) {
+        var messageBox = $("#messageContainer");
+        messageBox.removeClass("error-box success-box").addClass(type === "error" ? "error-box" : "success-box");
+        messageBox.text(message).fadeIn().delay(3000).fadeOut();
+    }
+});
+
+</script>
+<script>
+$(document).ready(function(){
+    // "Kayıt Ol" butonuna basıldığında pop-up aç
+    $(".appointment").on("click touchstart", function(event){
+        event.preventDefault();
+        $(".wrapper").fadeIn();
+    });
+
+    // Kapatma butonuna basıldığında pop-up kapanmasnı sağla
+    $(".icon-close").on("click touchstart", function(){
+        $(".wrapper").fadeOut();
+    });
+
+    // Kullanıcı dışarı tıklarsa pop-up kapanır
+    $(document).on("click touchstart", function(event) {
+        if (!$(event.target).closest(".form-box, .appointment").length) {
+            $(".wrapper").fadeOut();
+        }
+    });
+});
+</script>
+
+	</body>
+
+
+</html>
